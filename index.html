@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LLM Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>LLM Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="how-it-works.html">How it works?</a>
+                </li>
+                <li>
+                    <a href="tokenCounter.html">Token Counter</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section id="what-is-llm">
+                <h3>What is LLM?</h3>
+                <p>LLM stands for Large Language Model — an AI system trained on massive text datasets to understand and generate human language.</p>
+                <p>LLMs learn by predicting the next token (word or character) in a sequence. Through billions of these predictions, they develop an understanding of grammar, facts, and reasoning.</p>
+                <p>Well-known examples include GPT-4 by OpenAI and Claude by Anthropic.</p>
+            </section>
+            <section id="what-is-token">
+                <h3>What is a Token?</h3>
+                <p>A token is a small chunk of text that an LLM processes at once — roughly 3-4 characters or about ¾ of a word on average. Words, punctuation, and even spaces can each become separate tokens.</p>
+                <p>Tokens matter because they are the basic unit LLMs use to measure context window size (how much text the model can "see" at once) and pricing (APIs charge per token consumed).</p>
+                <p>For example, the sentence "Hello, world!" splits into 4 tokens: "Hello", ",", "world", "!"</p>
+                <p>Language also affects token count. English is efficient — one word is often one token. Azerbaijani, however, is an agglutinative language with long compound words, so the same meaning typically requires more tokens. For example, the English phrase "I cannot come" is 4 tokens, while its Azerbaijani equivalent "Gələ bilmərəm" may be split into more tokens because the model's vocabulary covers Azerbaijani less thoroughly.</p>
+            </section>
+            <section id="comparison">
+                <h3>LLM Comparison</h3>
+                <table>
+                    <caption>Comparison of leading LLMs by provider, context window, pricing, and reasoning capability (May 2026)</caption>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Provider</th>
+                            <th>Context Window</th>
+                            <th>Input Price (per 1M tokens)</th>
+                            <th>Output Price (per 1M tokens)</th>
+                            <th>Reasoning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GPT-5.5 (xhigh)</td>
+                            <td>OpenAI</td>
+                            <td>922k</td>
+                            <td>$5.00</td>
+                            <td>$30.00</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Claude Opus 4.7 (max)</td>
+                            <td>Anthropic</td>
+                            <td>1m</td>
+                            <td>$6.25</td>
+                            <td>$25.00</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Gemini 3.1 Pro Preview</td>
+                            <td>Google</td>
+                            <td>1m</td>
+                            <td>$2.00</td>
+                            <td>$12.00</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-5.4 (xhigh)</td>
+                            <td>OpenAI</td>
+                            <td>1m</td>
+                            <td>$2.50</td>
+                            <td>$15.00</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Kimi K2.6</td>
+                            <td>Kimi</td>
+                            <td>256k</td>
+                            <td>$0.95</td>
+                            <td>$4.00</td>
+                            <td>✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="model-cards">
+                <h2>Model Cards</h2>
+                <section class="cards-container">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-provider">OpenAI</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+                
+                        <h3 class="card-name">GPT-5.5 (xhigh)</h3>
+                
+                        <p class="card-tagline">
+                            Best for advanced coding, reasoning, and large-scale tasks.
+                        </p>
+                
+                        <ul class="card-specs">
+                            <li>
+                                <span class="spec-label">Context</span>
+                                <span class="spec-value">922k</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Input</span>
+                                <span class="spec-value">$5.00 / 1M</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">$30.00 / 1M</span>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-provider">Anthropic</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+                
+                        <h3 class="card-name">Claude Opus 4.7 (max)</h3>
+                
+                        <p class="card-tagline">
+                            Excellent for long documents and detailed analysis.
+                        </p>
+                
+                        <ul class="card-specs">
+                            <li>
+                                <span class="spec-label">Context</span>
+                                <span class="spec-value">1m</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Input</span>
+                                <span class="spec-value">$6.25 / 1M</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">$25.00 / 1M</span>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-provider">Google</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+                
+                        <h3 class="card-name">Gemini 3.1 Pro Preview</h3>
+                
+                        <p class="card-tagline">
+                            Great for multimodal tasks and fast information processing.
+                        </p>
+                
+                        <ul class="card-specs">
+                            <li>
+                                <span class="spec-label">Context</span>
+                                <span class="spec-value">1m</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Input</span>
+                                <span class="spec-value">$2.00 / 1M</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">$12.00 / 1M</span>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-provider">OpenAI</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+                
+                        <h3 class="card-name">GPT-5.4 (xhigh)</h3>
+                
+                        <p class="card-tagline">
+                            Reliable for general productivity and conversational AI tasks.
+                        </p>
+                
+                        <ul class="card-specs">
+                            <li>
+                                <span class="spec-label">Context</span>
+                                <span class="spec-value">1m</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Input</span>
+                                <span class="spec-value">$2.50 / 1M</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">$15.00 / 1M</span>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-provider">Kimi</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+                
+                        <h3 class="card-name">Kimi K2.6</h3>
+                
+                        <p class="card-tagline">
+                            Affordable model suited for lightweight reasoning and chat tasks.
+                        </p>
+                
+                        <ul class="card-specs">
+                            <li>
+                                <span class="spec-label">Context</span>
+                                <span class="spec-value">256k</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Input</span>
+                                <span class="spec-value">$0.95 / 1M</span>
+                            </li>
+                
+                            <li>
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">$4.00 / 1M</span>
+                            </li>
+                        </ul>
+                    </div>
+                
+                </section>
+            </section>
+        </main>
+        <footer>
+            <p>Sources: <a href="https://artificialanalysis.ai/">Artificial Analysis</a></p>
+        </footer>
+  </body>
+</html>
